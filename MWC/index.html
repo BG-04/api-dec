@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>onlineItuts</title>
+</head>
+
+<body id="white">
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="book-svgrepo-com.svg" alt="" height="38px">
+                </div>
+                <div class="content">
+                    <select id="font-selector">
+                        <option value="sans-serif">sans serif</option>
+                        <option value="serif">serif</option>
+                        <option value="monospace">monospace</option>
+                    </select>
+
+                    <label class="switch">
+                        <input type="checkbox" id="mode-toggle">
+                        <span class="slider round"></span>
+                    </label>&nbsp;&nbsp;&nbsp;
+                    <img src="moon-svgrepo-com.svg" alt="moon" height="20px">
+                </div>
+            </nav>
+            <form> 
+                <input type="text" placeholder='search the word' id="searchInput">
+                <img src="search-alt-svgrepo-com.svg" class="search-icon" height="20px">
+                <p id="message"></p>
+            </form>
+        </div>
+    </header>
+    <section id="article">
+        <div class="container">
+            <div id="disContainer" class="disctonaryContent">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const inputEl = document.querySelector("form input");
+        document.getElementById('mode-toggle').addEventListener('click', function () {
+            document.body.classList.toggle('dark');
+        });
+        document.getElementById('font-selector').addEventListener('change', function () {
+            document.body.style.fontFamily = this.value;
+            
+        });
+    </script>
+     
+</body>
+
+</html>
